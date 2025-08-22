@@ -221,6 +221,34 @@ header {
     .imagens-sobre-mim .img-wrapper {
         width: 45%; 
     }
+
+    /* Esconde o cursor personalizado em telas menores */
+    .cursor-dot,
+    .cursor-outline {
+        display: none !important;
+    }
+
+    /* Ajusta o menu para telas menores */
+        .menu {
+        flex-direction: column; /* Coloca os itens em coluna */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        padding: 10px 0; /* Adiciona um pouco de padding vertical */
+    }
+
+    /* Ajusta os links do menu para telas menores */
+    .menu a {
+        margin: 5px 0; /* Adiciona um pouco de margem entre os links */
+        font-size: 1.2rem; /* Aumenta um pouco a fonte para facilitar o toque */
+        padding: 8px 15px; /* Adiciona um pouco de padding nos links */
+        border-radius: 5px; /* Deixa os links com cantos arredondados (opcional) */
+        border-bottom: 2px solid transparent; /* Remove qualquer sublinhado */
+    }
+
+    /* Ajusta o link ativo do menu para telas menores */
+    .menu a.active {
+        border-bottom: 2px solid var(--cor-destaque) !important; /* Adiciona um destaque na parte inferior do link ativo */
+        transform: scale(1.0) !important; /* Remove o efeito de "scale" no mobile */
+    }
 }
 
 @media (max-width: 480px) {
