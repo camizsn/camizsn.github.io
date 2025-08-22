@@ -1,0 +1,477 @@
+/* Importando a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+/* DEFINIÇÃO DE VARIÁVEIS DE CORES */
+:root {
+    --cor-fundo: #E8F0FE;
+    --cor-texto: #2447AB;
+    --cor-primaria: #4169E1;
+    --cor-destaque: #e99635; 
+    --branco: #FFFFFF;
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* ESTILOS GLOBAIS E RESET */
+/* Reset básico para margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Rolagem suave para âncoras */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos do corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Container centralizado */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para títulos */
+h1, h2, h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Estilo para o título principal */
+h1 { font-size: 2.8rem; text-align: center; }
+
+/* Estilo específico para o título principal da seção "Sobre Mim" */
+#typing-effect {
+    color: var(--cor-destaque);
+}
+
+/* Estilo para os subtítulos */
+h2 { font-size: 2.2rem; text-align: center; padding-bottom: 10px; border-bottom: 3px solid var(--cor-destaque); display: inline-block; }
+h3 { font-size: 1.5rem; }
+
+/* Estilo para parágrafos */
+section {
+   
+    padding: 100px 0;
+}
+/* Alterna a cor de fundo das seções para melhor visualização */
+section:nth-child(even) {
+    background-color: var(--branco);
+}
+
+/* CABEÇALHO FIXO */
+header {
+    background-color: var(--cor-primaria);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px var(--sombra);
+}
+
+/* Logo */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+
+/* Links do Menu */
+.menu a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: all 0.3s ease; /* Transição para cor e transform */
+}
+
+/* Estilo para o link do menu */
+.menu a.active {
+    color: var(--cor-destaque) !important;
+    transform: scale(1.1) !important;
+}
+
+/* Efeito de hover para o link do menu */
+.menu a:hover {
+    color: var(--cor-destaque);
+}
+
+/* SEÇÃO SOBRE MIM*/
+#sobre-mim .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Estilo da foto de perfil */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    border: 5px solid var(--cor-destaque);
+    box-shadow: 0 4px 15px var(--sombra);
+}
+
+/* Estilo do subtítulo */
+.subtitulo-interativo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 40px;
+}
+
+/* Efeito de destaque ao passar o mouse */
+.subtitulo-interativo span {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.subtitulo-interativo span:hover {
+    color: var(--cor-destaque);
+}
+
+/* Estilos para o texto na seção "Sobre Mim" */
+.texto-sobre-mim {
+    text-align: justify;
+    margin-bottom: 50px; 
+}
+
+/* Estilo dos parágrafos */
+.texto-sobre-mim p {
+    font-size: 1.1rem;
+    color: #555D71;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Estilo para palavras em destaque */
+.texto-sobre-mim strong {
+    color: var(--cor-destaque);
+    font-weight: 700;
+}
+
+/* Estilo para o call to action */
+.texto-sobre-mim .call-to-action {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Estilos para as imagens na seção "Sobre Mim" */
+/* Container que agrupa as imagens */
+.imagens-sobre-mim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+/* Estilos para as imagens dentro do container */
+.imagens-sobre-mim img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre todo o espaço do container */
+}
+
+/* Estilo do container */
+.imagens-sobre-mim .img-wrapper {
+    width: 30%; 
+    max-width: 280px;
+    aspect-ratio: 4 / 5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--sombra);
+    border: 4px solid transparent;
+    transition: all 0.4s ease; 
+}
+
+/* Efeito de destaque ao passar o mouse na imagem */
+.imagens-sobre-mim .img-wrapper.highlighted {
+    transform: scale(1.05);
+    border-color: var(--cor-destaque);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+/* Efeito de destaque ao passar o mouse na imagem dentro do "porta-retrato" */
+.imagens-sobre-mim .img-wrapper:hover {
+    transform: scale(1.05);
+    border-color: var(--cor-destaque);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+
+/* DESIGN RESPONSIVO */
+@media (max-width: 768px) {
+    .imagens-sobre-mim .img-wrapper {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .imagens-sobre-mim .img-wrapper {
+        width: 80%;
+    }
+}
+
+/* Efeito de destaque ao passar o mouse */
+.imagens-sobre-mim img.highlighted {
+    transform: scale(1.05);
+    border-color: var(--cor-destaque);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+
+/* SEÇÃO FORMAÇÃO */
+#formacao ul { list-style: none; padding-left: 0; }
+#formacao ul li { margin-bottom: 15px; font-size: 1.1rem; }
+
+/* Formatação dos itens da lista de ferramentas */
+.ferramentas-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Estilo dos itens da lista de ferramentas */
+.ferramentas-lista li {
+    background-color: var(--branco);
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px var(--sombra);
+    font-weight: 700;
+}
+
+/* Ícones dentro da lista de ferramentas */
+.ferramentas-lista i { color: var(--cor-destaque); margin-right: 10px; }
+
+
+/* SEÇÃO PORTIFÓLIO */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Cartão de Projeto */
+.projeto-card {
+    background-color: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--sombra);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
+
+/* Efeito de hover no cartão */
+.projeto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem do Projeto */
+.projeto-card img { width: 100%; height: 200px; object-fit: cover; }
+
+/* Conteúdo do Cartão */
+.card-content { padding: 25px; flex-grow: 1; }
+
+/* Título do Projeto */
+.card-content h3 { margin-bottom: 15px; color: var(--cor-primaria); }
+
+/* Descrição do Projeto */
+.tags { margin-top: 20px; }
+
+/* Tags dentro do cartão */
+.tags span {
+    background-color: var(--cor-destaque);
+    color: var(--branco);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+
+/* SEÇÃO DE CONTATO */
+/* Centraliza o conteúdo da seção de contato */
+#contato .container { text-align: center; }
+
+/* Ícones de redes sociais */
+.social-icons {
+    margin: 30px 0;
+}
+
+/* Estilo dos ícones de redes sociais */
+.social-icons a {
+    color: var(--cor-primaria);
+    font-size: 2.5rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de hover nos ícones de redes sociais */
+.social-icons a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Formulário de Contato */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Estilo dos campos do formulário */
+form label { display: block; margin-bottom: 5px; font-weight: 700; }
+
+/* Estilo dos campos de entrada do formulário */
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo do botão de envio do formulário */
+form button {
+    background-color: var(--cor-destaque);
+    color: var(--branco);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover no botão de envio do formulário */
+form button:hover {
+    background-color: #F79F00; /* Laranja um pouco mais escuro no hover */
+}
+
+/* --- RODAPÉ --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+}
+
+/* --- BOTÃO VOLTAR AO TOPO --- */
+/* Estilo do Botão Voltar ao Topo */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--cor-destaque);
+    color: var(--branco);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none; /* Começa escondido */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 8px var(--sombra);
+    transition: opacity 0.4s, visibility 0.4s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Estilo para mostrar o botão quando necessário */
+.back-to-top-btn.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilo para a Interatividade do Sobre Mim */
+.subtitulo-interativo {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-top: -20px; /* Ajuste para o espaço após o h1 */
+    margin-bottom: 30px;
+}
+
+/* Efeito de destaque ao passar o mouse */
+.subtitulo-interativo span {
+    cursor: pointer; /* Muda o mouse para a "mãozinha" */
+    transition: color 0.3s ease;
+}
+.subtitulo-interativo span:hover {
+    color: var(--cor-destaque); /* Palavra fica laranja ao passar o mouse */
+}
+
+
+/* CURSOR PERSONALIZADO */
+/* Esconde o cursor padrão do mouse */
+body {
+    cursor: none;
+}
+
+/* Garante que links e botões ainda mostrem a "mãozinha" */
+a, button {
+    cursor: pointer;
+}
+
+/* Estilo do ponto central do cursor */
+.cursor-dot {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: var(--cor-destaque);
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o ponto */
+    pointer-events: none; /* Faz o cursor "ignorar" cliques */
+    z-index: 9999;
+}
+
+/* Estilo do círculo externo do cursor */
+.cursor-outline {
+    position: fixed; /* Fixa na tela */
+    top: 50%;
+    left: 50%;
+    width: 40px; /* Tamanho do círculo */
+    height: 40px; 
+    border: 2px solid var(--cor-destaque);
+    border-radius: 50%;
+    transform: translate(-50%, -50%); 
+    pointer-events: none; /* Ignora cliques */
+    z-index: 9999; /* Fica acima de outros elementos */
+    transition: all 0.1s ease-out; /* Transição para o efeito de "lag" */
+}
+
+/* Estilo para quando o cursor crescer */
+.cursor-outline.grow {
+    transform: translate(-50%, -50%) scale(1.5);
+    border-color: var(--cor-primaria);
+}

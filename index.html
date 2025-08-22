@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camille Nogueira - Portfólio</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Elementos do cursor personalizado -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Cabeçalho com menu de navegação -->
+    <header>
+        <nav class="menu">
+            <a href="#sobre-mim" data-section="sobre-mim">Sobre mim</a>
+            <a href="#formacao" data-section="formacao">Formação</a>
+            <a href="#portfolio" data-section="portfolio">Portfólio</a>
+            <a href="#contato" data-section="contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção Sobre Mim -->
+        <section id="sobre-mim">
+
+            <!-- Container para centralizar o conteúdo -->
+            <div class="container">
+                <img src="img/img_profile.webp" alt="Foto de Perfil da Camille" class="profile-pic">
+                <h1 id="typing-effect">Prazer, sou Camille!</h1>
+
+                <!-- Subtítulo com palavras interativas -->
+                <p class="subtitulo-interativo">
+                    Apaixonada por <span id="keyword-dados">dados</span>, <span id="keyword-musculacao">musculação</span> e pelo <span id="keyword-bahia">axé da Bahia</span>
+                </p>
+
+                <!-- Texto da seção Sobre Mim -->
+                <div class="texto-sobre-mim">
+                    <p>Nascida e criada no coração de Itapetinga, no interior da Bahia, eu sempre fui fascinada por decifrar enigmas. Hoje, troquei os mistérios dos livros pelos que encontro nos dados.</p>
+                    <p>Como estudante de Ciência de Dados na UNINTER, minha missão é transformar números em <strong>narrativas claras e impactantes</strong> que possam gerar mudanças reais.</p>
+                    <p>Fora dos códigos e planilhas, você me encontra na academia. A musculação me ensinou sobre <strong>disciplina, consistência</strong> e a incrível satisfação de superar limites. Levo essa mesma energia para os meus projetos: cada desafio é um novo 'treino', e cada solução, uma nova conquista.</p>
+                    <p>Estou sempre em busca de novos aprendizados, mergulhando nos cursos da Hashtag Treinamentos e nos desafios do programa Edumi for Youth.</p>
+                    <p><strong>Meu objetivo é usar a tecnologia para construir pontes e criar soluções inteligentes.</strong></p>
+                    <p class="call-to-action">Vamos construir algo incrível juntos?</p>
+                </div>
+            
+            <!-- Imagens -->
+            <div class="imagens-sobre-mim">
+                <div class="img-wrapper">
+                    <img id="img-dados" src="img/img_study.jpg" alt="Ambiente de estudos da Camille"> <!-- Imagem de ambiente de estudo -->
+                </div>
+                <div class="img-wrapper">
+                    <img id="img-musculacao" src="img/img_gym.png" alt="Camille fazendo agachamento com 120kg"> <!-- Imagem de musculação -->
+                </div>
+                <div class="img-wrapper">
+                    <img id="img-bahia" src="img/img_bahia.png" alt="Ilustração representando a Bahia"> <!-- Imagem representando a Bahia -->
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Seção Formação & Ferramentas -->
+        <section id="formacao">
+            
+            <div class="container">
+                <!-- Título da seção -->
+                <h2>Formação & Ferramentas</h2>
+                <h3>Formação Acadêmica e Cursos</h3>
+                <!-- Lista de formações e cursos -->
+                <ul>
+                    <li><b>Ciência de Dados (Graduação)</b> - UNINTER (Cursando, previsão de conclusão: 2027.1)</li>
+                    <li><b>Bolsista Edumi for Youth 2025</b> - Resolução de cases práticos semanais com foco em preparação para o mercado de Análise de Dados.</li>
+                </ul>
+                <br>
+                
+                <!-- Ferramentas e tecnologias -->
+                <h3>Minhas Ferramentas</h3>
+                <!-- Lista de ferramentas e tecnologias -->
+                <ul class="ferramentas-lista">
+                    <li><i class="fab fa-python"></i> Python (Pandas, Scikit-Learn, Matplotlib)</li>
+                    <li><i class="fas fa-database"></i> SQL (MySQL)</li>
+                    <li><i class="fab fa-html5"></i> HTML5</li>
+                    <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                    <li><i class="fas fa-chart-bar"></i> Power BI</li>
+                    <li><i class="fas fa-file-excel"></i> Excel Avançado</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Seção Portfólio -->
+        <section id="portfolio">
+            <div class="container">
+                <h2>Portfólio de Projetos</h2>
+
+                <!-- Cartões de projetos -->
+                <div class="portfolio-grid">
+
+                    <!-- Projeto Análise de Churn de Clientes -->
+                    <div class="projeto-card">
+                        <div class="card-content">
+                            <h3>Análise de Churn de Clientes</h3>
+                            <!-- Descrição do projeto -->
+                            <p>Análise exploratória para identificar os fatores de cancelamento e propor soluções que reduziram a taxa de churn de 56% para 7%.</p>
+                            <div class="tags"><span>Python</span><span>Pandas</span><span>Plotly</span></div>
+                        </div>
+                        <!-- Imagem do projeto -->
+                        <img src="img/img_churn.png" alt="Gráfico do Projeto de Churn">
+                    </div>
+                    
+                    <!-- Projeto Análise Marvel vs DC -->
+                    <div class="projeto-card">
+                        <div class="card-content">
+                            <h3>Case: Marvel vs. DC</h3>
+                            <!-- Descrição do projeto -->
+                            <p>Análise exploratória de dados do Kaggle para decidir, com base em dados, qual franquia de super-heróis se sai melhor em diversas métricas.</p>
+                            <div class="tags"><span>SQL</span><span>Análise de Dados</span></div>
+                        </div>
+                        <!-- Imagem do projeto -->
+                        <img src="img/img_marvelvsdc2.png" alt="Análise Marvel vs DC">
+                    </div>
+
+                    <!-- Projeto Automação de Cadastros -->
+                    <div class="projeto-card">
+                        <div class="card-content">
+                            <h3>Automação de Cadastros</h3>
+                            <!-- Descrição do projeto -->
+                            <p>Script para automatizar o processo de cadastramento de produtos em um sistema, eliminando a inserção manual e otimizando o tempo.</p>
+                            <div class="tags"><span>Python</span><span>PyAutoGUI</span></div>
+                        </div>
+                        <!-- Imagem do projeto -->
+                        <img src="img/img_automacao.png" alt="Interface da Automação">
+                    </div>
+
+                    <!-- Projeto Previsão de Score de Crédito -->
+                    <div class="projeto-card">
+                        <div class="card-content">
+                            <h3>Previsão de Score de Crédito</h3>
+                            <!-- Descrição do projeto -->
+                            <p>Criação de um modelo de Machine Learning para prever o score de crédito de clientes com 83% de precisão, auxiliando na tomada de decisões.</p>
+                            <div class="tags"><span>Python</span><span>Scikit-learn</span></div>
+                        </div>
+                        <!-- Imagem do projeto -->
+                        <img src="img/img_previsaoscore.png" alt="Resultado da Previsão de Score">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato">
+            <div class="container">
+                <h2>Vamos Conversar?</h2>
+                <p>Estou sempre aberta a novas oportunidades e colaborações. Me encontre nas redes sociais ou envie uma mensagem!</p>
+                
+                <!-- Ícones de redes sociais -->
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/camillenogueira" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/datacami/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/camizsn" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:camillesantos85@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                
+                <!-- Formulário de contato -->
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 - Desenvolvido por Camille Nogueira</p>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <a href="#" id="back-to-top" class="back-to-top-btn" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
