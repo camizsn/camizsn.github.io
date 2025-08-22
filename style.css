@@ -221,7 +221,12 @@ header {
     .imagens-sobre-mim .img-wrapper {
         width: 45%; 
     }
+}
 
+@media (max-width: 480px) {
+    .imagens-sobre-mim .img-wrapper {
+        width: 80%;
+    }
     /* Esconde o cursor personalizado em telas menores */
     .cursor-dot,
     .cursor-outline {
@@ -248,12 +253,6 @@ header {
     .menu a.active {
         border-bottom: 2px solid var(--cor-destaque) !important; /* Adiciona um destaque na parte inferior do link ativo */
         transform: scale(1.0) !important; /* Remove o efeito de "scale" no mobile */
-    }
-}
-
-@media (max-width: 480px) {
-    .imagens-sobre-mim .img-wrapper {
-        width: 80%;
     }
 }
 
